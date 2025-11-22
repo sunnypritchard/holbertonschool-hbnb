@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse amazing places to stay with HolbertonBnB">
+    <title>List of Places - HolbertonBnB (Modular)</title>
+    <link rel="stylesheet" href="/static/css/styles.css">
+    <link rel="icon" type="image/png" href="/static/images/icon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/">
+                <img src="/static/images/logo.png" alt="HolbertonBnB Logo" class="logo">
+            </a>
+            <a href="/login" id="login-link" class="login-button">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section class="filters">
+            <h2>Filters</h2>
+            <div class="filter-group">
+                <label for="price-filter">Price Range:</label>
+                <select id="price-filter">
+                    <!-- Options populated by JavaScript -->
+                </select>
+            </div>
+        </section>
+
+        <section id="places-list" class="places-grid">
+            <!-- Place cards will be dynamically populated here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 HolbertonBnB. All rights reserved.</p>
+    </footer>
+
+    <!-- NEW MODULAR APPROACH -->
+    <script type="module" src="/static/js/main.js"></script>
+</body>
+</html>

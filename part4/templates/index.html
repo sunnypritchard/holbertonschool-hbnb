@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse amazing places to stay with HolbertonBnB">
+    <title>List of Places - HolbertonBnB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HolbertonBnB Logo" class="logo">
+            </a>
+            <a href="{{ url_for('login') }}" id="login-link" class="login-button">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section id="filter">
+            <label for="price-filter">Max Price:</label>
+            <select id="price-filter">
+                <!-- Options will be populated dynamically -->
+            </select>
+        </section>
+        <section id="places-list">
+            <!-- List of places will be populated dynamically -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 HolbertonBnB. All rights reserved.</p>
+    </footer>
+
+    <!-- Modular JavaScript with ES6 modules -->
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Legacy fallback (optional - can be removed once fully migrated) -->
+    <!-- <script nomodule src="{{ url_for('static', filename='js/scripts.js') }}"></script> -->
+</body>
+</html>

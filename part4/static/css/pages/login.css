@@ -1,0 +1,47 @@
+/**
+ * Login Page Styles
+ * Login form container and layout
+ */
+
+/* Login Form Container */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 200px);
+    padding: var(--spacing-xl);
+}
+
+.login-container form {
+    background-color: var(--surface);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.login-container h1 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-primary);
+}
+
+/* Responsive: Tablet */
+@media (max-width: 768px) {
+    .login-container form {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+    .login-container {
+        padding: var(--spacing-md);
+    }
+
+    .login-container form {
+        padding: var(--spacing-md);
+    }
+}

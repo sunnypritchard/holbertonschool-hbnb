@@ -1,0 +1,83 @@
+/**
+ * Add Review Page Styles
+ * Review form section and layout
+ */
+
+/* Add Review Section */
+#add-review {
+    background-color: var(--background-alt);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+}
+
+#add-review.hidden {
+    display: none;
+}
+
+#add-review h2 {
+    margin-bottom: var(--spacing-lg);
+}
+
+#add-review form {
+    background-color: var(--surface);
+}
+
+/* Add Review Container (Standalone Page) */
+.add-review-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.add-review-container h1 {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-primary);
+}
+
+.add-review-container .place-info {
+    background-color: var(--surface);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-sm);
+    text-align: center;
+}
+
+.add-review-container .place-info h2 {
+    margin-bottom: var(--spacing-sm);
+    color: var(--text-primary);
+}
+
+.add-review-container .place-info .host {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.add-review-container form {
+    background-color: var(--surface);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+    #add-review {
+        padding: var(--spacing-lg);
+    }
+
+    .add-review-container {
+        padding: var(--spacing-md);
+    }
+
+    .add-review-container form {
+        padding: var(--spacing-md);
+    }
+}
+
+/* Print Styles */
+@media print {
+    #add-review {
+        display: none;
+    }
+}

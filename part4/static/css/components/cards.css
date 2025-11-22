@@ -1,0 +1,174 @@
+/**
+ * Card Components
+ * Place cards, review cards, and general card styles
+ */
+
+/* Base Card */
+.card {
+    background-color: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+}
+
+.card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+/* Place Card */
+.place-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    transition: all var(--transition-base);
+    cursor: pointer;
+}
+
+.place-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-color);
+}
+
+.place-card h3 {
+    color: var(--text-primary);
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.place-card .place-price {
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin: var(--spacing-sm) 0;
+}
+
+.place-card .place-location {
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+}
+
+/* Review Card */
+.review-card {
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin: var(--spacing-md) 0;
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-base);
+    overflow: hidden;
+    max-width: 100%;
+}
+
+.review-card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.review-card .review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.review-card .reviewer-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.review-card .rating {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+.review-card .rating::before {
+    content: '★ ';
+}
+
+.review-card .review-rating {
+    color: var(--warning);
+    font-size: 1.1rem;
+}
+
+.review-card .review-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Card Grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-lg);
+    margin-top: var(--spacing-lg);
+}
+
+/* Card Image */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-md);
+}
+
+/* Card Content */
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+/* Card Actions */
+.card-actions {
+    display: flex;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-md);
+}
+
+/* Info Card */
+.info-card {
+    background-color: var(--background-alt);
+    border-left: 4px solid var(--primary-color);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+    margin: var(--spacing-md) 0;
+}
+
+/* Warning Card */
+.warning-card {
+    background-color: #FFF9E6;
+    border-left: 4px solid var(--warning);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+}
+
+/* Error Card */
+.error-card {
+    background-color: #FFE6E6;
+    border-left: 4px solid var(--error);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+}
+
+/* Success Card */
+.success-card {
+    background-color: #E6F9F7;
+    border-left: 4px solid var(--success);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-sm);
+}

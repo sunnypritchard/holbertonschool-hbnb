@@ -1,0 +1,70 @@
+/**
+ * CSS Variables - Design Tokens
+ * Central configuration for colors, typography, spacing, and more
+ */
+
+:root {
+    /* Primary Colors - Airbnb-inspired */
+    --primary-color: #FF5A5F;
+    --primary-dark: #E8464B;
+    --primary-light: #FFB4B7;
+
+    /* Neutral Colors */
+    --background: #FFFFFF;
+    --background-alt: #F7F7F7;
+    --surface: #FFFFFF;
+    --border: #DDDDDD;
+    --border-light: #EBEBEB;
+    --border-gray-darkest: #222222;
+    --border-gray-dark: #484848;
+
+    /* Text Colors */
+    --text-primary: #484848;
+    --text-secondary: #767676;
+    --text-light: #B0B0B0;
+    --text-white: #FFFFFF;
+
+    /* Semantic Colors */
+    --success: #00A699;
+    --error: #C13515;
+    --warning: #F4B400;
+
+    /* Typography */
+    --font-primary: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+                    'Helvetica Neue', Arial, sans-serif;
+    --font-size-base: 16px;
+    --line-height-base: 1.6;
+
+    /* Spacing Scale */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 16px;
+    --spacing-lg: 24px;
+    --spacing-xl: 32px;
+    --spacing-2xl: 48px;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 20px rgba(0, 0, 0, 0.12);
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 10px;
+    --radius-xl: 16px;
+
+    /* Transitions */
+    --transition-fast: 150ms ease;
+    --transition-base: 250ms ease;
+    --transition-slow: 350ms ease;
+
+    /* Z-Index Scale */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}

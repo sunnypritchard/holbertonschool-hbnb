@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add a review on HolbertonBnB">
+    <title>Add Review - HolbertonBnB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HolbertonBnB Logo" class="logo">
+            </a>
+            <a href="{{ url_for('login') }}" id="login-link" class="login-button">Login</a>
+        </nav>
+    </header>
+    <main>
+        <!-- Add something to identify the place you're reviewing -->
+        <div id="place-info" class="place-info">
+            <!-- Place information will be populated dynamically -->
+        </div>
+        <form id="review-form">
+            <h2>Add a Review</h2>
+            <label for="review">Your Review:</label>
+            <textarea id="review" name="review" required></textarea>
+            <label for="rating">Rating:</label>
+            <select id="rating" name="rating" required>
+                <option value="">Select rating</option>
+                <option value="1">1 - Poor</option>
+                <option value="2">2 - Fair</option>
+                <option value="3">3 - Good</option>
+                <option value="4">4 - Very Good</option>
+                <option value="5">5 - Excellent</option>
+            </select>
+            <button type="submit">Submit Review</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 HolbertonBnB. All rights reserved.</p>
+    </footer>
+
+    <!-- Modular JavaScript with ES6 modules -->
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Legacy fallback (optional - can be removed once fully migrated) -->
+    <!-- <script nomodule src="{{ url_for('static', filename='js/scripts.js') }}"></script> -->
+    <!-- Note: The initAddReviewPage() function is now handled automatically by main.js -->
+</body>
+</html>

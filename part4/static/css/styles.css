@@ -1,0 +1,164 @@
+/**
+ * HBNB - Main Stylesheet
+ * Modular CSS architecture for HolbertonBnB property rental platform
+ *
+ * This file imports all modular CSS components for better maintainability
+ * and reusability. Each module is focused on a specific concern.
+ *
+ * Original monolithic stylesheet backed up as: styles.old.css
+ */
+
+/* ============================================================================
+   BASE STYLES
+   Core design tokens, resets, and typography
+   ============================================================================ */
+
+/* Design Tokens - CSS Custom Properties */
+@import url('base/variables.css');
+
+/* CSS Reset & Normalization */
+@import url('base/reset.css');
+
+/* Typography - Headings, paragraphs, links */
+@import url('base/typography.css');
+
+/* ============================================================================
+   COMPONENTS
+   Reusable UI components used across multiple pages
+   ============================================================================ */
+
+/* Navigation - Header, nav, logo, footer */
+@import url('components/navigation.css');
+
+/* Buttons - All button variants and states */
+@import url('components/buttons.css');
+
+/* Forms - Input fields, labels, validation */
+@import url('components/forms.css');
+
+/* Cards - Place cards, review cards, variants */
+@import url('components/cards.css');
+
+/* ============================================================================
+   PAGES
+   Page-specific styles for different views
+   ============================================================================ */
+
+/* Home Page - Places list and filtering */
+@import url('pages/home.css');
+
+/* Login Page - Login form layout */
+@import url('pages/login.css');
+
+/* Place Details - Place info, amenities, reviews */
+@import url('pages/place-details.css');
+
+/* Add Review - Review submission form */
+@import url('pages/add-review.css');
+
+/* ============================================================================
+   LAYOUT
+   Main layout structure
+   ============================================================================ */
+
+/* Main Content Area */
+main {
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: var(--spacing-2xl) var(--spacing-xl);
+}
+
+/* ============================================================================
+   UTILITY CLASSES
+   Helper classes for common patterns
+   ============================================================================ */
+
+/* Visibility */
+.hidden {
+    display: none !important;
+}
+
+/* Messages */
+.error-message {
+    background-color: rgba(193, 53, 21, 0.1);
+    color: var(--error);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    border-left: 4px solid var(--error);
+}
+
+.success-message {
+    background-color: rgba(0, 166, 153, 0.1);
+    color: var(--success);
+    padding: var(--spacing-md);
+    border-radius: var(--radius-md);
+    margin-bottom: var(--spacing-lg);
+    border-left: 4px solid var(--success);
+}
+
+/* Text Alignment */
+.text-center {
+    text-align: center;
+}
+
+/* Spacing Utilities */
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+
+/* ============================================================================
+   RESPONSIVE DESIGN
+   Media queries for different screen sizes
+   ============================================================================ */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    :root {
+        font-size: 14px;
+    }
+
+    main {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    main {
+        padding: var(--spacing-md);
+    }
+}
+
+/* ============================================================================
+   PRINT STYLES
+   Optimized styles for printing
+   ============================================================================ */
+@media print {
+    header,
+    footer,
+    #add-review,
+    .details-button,
+    .login-button {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .place-card,
+    .review-card {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+}

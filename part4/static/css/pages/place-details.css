@@ -1,0 +1,174 @@
+/**
+ * Place Details Page Styles
+ * Place information, amenities, and reviews section
+ */
+
+/* Place Details Container */
+.place-details {
+    background-color: var(--surface);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-xl);
+    text-align: center;
+}
+
+.place-details h1 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.place-details-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-md);
+}
+
+.place-details-content > p {
+    margin: 0;
+}
+
+/* Place Information */
+.place-info {
+    margin-bottom: var(--spacing-lg);
+}
+
+.place-info h1 {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.place-info .host {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.place-info .price {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: var(--spacing-lg);
+}
+
+.place-info .description {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Amenities Section */
+.place-amenities {
+    width: 100%;
+}
+
+.place-amenities > p {
+    margin-bottom: var(--spacing-sm);
+}
+
+.amenities-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+.amenity-item {
+    background-color: var(--background-alt);
+    padding: var(--spacing-xs) var(--spacing-md);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border);
+}
+
+.amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+}
+
+.amenity-tag {
+    color: var(--text-primary);
+    padding: var(--spacing-sm) var(--spacing-md);
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+}
+
+.amenity-tag img {
+    width: 16px;
+    height: 16px;
+}
+
+/* Reviews Section */
+#reviews {
+    margin-bottom: var(--spacing-xl);
+}
+
+#reviews h2 {
+    margin-bottom: var(--spacing-lg);
+}
+
+#reviews .review-card {
+    margin-bottom: var(--spacing-lg);
+    cursor: default;
+}
+
+#reviews .review-card:hover {
+    transform: none;
+    box-shadow: var(--shadow-sm);
+}
+
+#reviews .review-card .review-header {
+    margin-bottom: var(--spacing-md);
+}
+
+#reviews .review-card .review-header p {
+    margin: 0;
+}
+
+#reviews .review-card .reviewer-name {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+#reviews .review-card .rating {
+    color: var(--warning);
+    font-weight: 600;
+}
+
+#reviews .review-card .rating::before {
+    content: '★ ';
+}
+
+#reviews .review-card .rating-stars {
+    color: black;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+#reviews .review-card .review-text {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+    .place-details {
+        padding: var(--spacing-lg);
+    }
+}
+
+/* Print Styles */
+@media print {
+    .place-details {
+        box-shadow: none;
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="View place details on HolbertonBnB">
+    <title>Place Details - HolbertonBnB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HolbertonBnB Logo" class="logo">
+            </a>
+            <a href="{{ url_for('login') }}" id="login-link" class="login-button">Login</a>
+        </nav>
+    </header>
+    <main>
+        <section id="place-details" class="place-details">
+            <!-- Place details will be populated dynamically -->
+        </section>
+        <section id="reviews">
+            <h2>Reviews</h2>
+            <!-- Reviews will be populated dynamically -->
+        </section>
+        <section id="add-review" class="add-review">
+            <h2>Add a Review</h2>
+            <form id="review-form">
+                <label for="review-text">Review:</label>
+                <textarea id="review-text" name="review-text" required></textarea>
+
+                <label for="rating">Rating:</label>
+                <select id="rating" name="rating" required>
+                    <option value="">Select rating</option>
+                    <option value="1">1 - Poor</option>
+                    <option value="2">2 - Fair</option>
+                    <option value="3">3 - Good</option>
+                    <option value="4">4 - Very Good</option>
+                    <option value="5">5 - Excellent</option>
+                </select>
+
+                <button type="submit">Submit</button>
+            </form>
+            <p style="text-align: center; margin-top: 1rem;">
+                <a href="#" id="separate-review-link" style="color: var(--primary-color); text-decoration: underline;">
+                    Or write a detailed review on a separate page
+                </a>
+            </p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 HolbertonBnB. All rights reserved.</p>
+    </footer>
+
+    <!-- Modular JavaScript with ES6 modules -->
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Legacy fallback (optional - can be removed once fully migrated) -->
+    <!-- <script nomodule src="{{ url_for('static', filename='js/scripts.js') }}"></script> -->
+</body>
+</html>

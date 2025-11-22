@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Login to HolbertonBnB - Your property rental platform">
+    <title>Login - HolbertonBnB</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/icon.png') }}">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/logo.png') }}" alt="HolbertonBnB Logo" class="logo">
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <form id="login-form">
+            <h2 class="text-center">Welcome Back</h2>
+            <p class="text-center" style="color: var(--text-secondary); margin-bottom: var(--spacing-xl);">
+                Sign in to access your account
+            </p>
+
+            <div id="error-message" class="error-message hidden"></div>
+
+            <label for="email">Email Address</label>
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="your.email@example.com"
+                required
+                autocomplete="email"
+            >
+
+            <label for="password">Password</label>
+            <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+                autocomplete="current-password"
+            >
+
+            <button type="submit" id="login-button">Sign In</button>
+
+            <p class="text-center mt-lg" style="font-size: 0.875rem; color: var(--text-secondary);">
+                Don't have an account? Contact your administrator.
+            </p>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 HolbertonBnB. All rights reserved.</p>
+    </footer>
+
+    <!-- Modular JavaScript with ES6 modules -->
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+
+    <!-- Legacy fallback (optional - can be removed once fully migrated) -->
+    <!-- <script nomodule src="{{ url_for('static', filename='js/scripts.js') }}"></script> -->
+</body>
+</html>

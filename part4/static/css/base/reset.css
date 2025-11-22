@@ -1,0 +1,75 @@
+/**
+ * CSS Reset & Base Styles
+ * Normalize browser defaults and set base styles
+ */
+
+/* Universal Box Sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* HTML & Body */
+html {
+    font-size: var(--font-size-base, 16px);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background);
+    color: var(--text-primary);
+    line-height: var(--line-height-base, 1.6);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Main Content */
+main {
+    flex: 1;
+    padding: var(--spacing-xl) var(--spacing-lg);
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Remove List Styles */
+ul,
+ol {
+    list-style: none;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Buttons */
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* Form Elements */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: inherit;
+}
