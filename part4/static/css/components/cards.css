@@ -20,9 +20,10 @@
 /* Place Card */
 .place-card {
     background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-md);
@@ -58,10 +59,10 @@
 /* Review Card */
 .review-card {
     background-color: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    margin: var(--spacing-md) 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-base);
     overflow: hidden;

@@ -1,1 +1,0 @@
-# holbertonschool-hbnb - Part 4: Simple Web Client

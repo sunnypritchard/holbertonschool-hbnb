@@ -72,6 +72,9 @@ button[type="submit"]:active,
     font-size: 0.875rem;
     font-weight: 500;
     transition: all var(--transition-base);
+    width: 50%;
+    display: block;
+    margin: 0 auto;
 }
 
 .details-button:hover {

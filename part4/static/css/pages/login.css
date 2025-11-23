@@ -15,11 +15,12 @@
 .login-container form {
     background-color: var(--surface);
     padding: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-md);
-    max-width: 500px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+    max-width: 400px;
     width: 100%;
     margin: 0 auto;
+    border: 1px solid var(--border-light);
 }
 
 .login-container h1 {
